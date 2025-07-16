@@ -18,7 +18,7 @@ namespace Challenge_Labs_2._2
                 Console.WriteLine("Enter Password: ");
                 string password = Console.ReadLine();
 
-                if (userId == "admin")
+                if (userId == realUserName && password == realPassword)
                 {
                     Console.WriteLine("Congrats you got it!");
                     continueProgram = false;
@@ -29,7 +29,7 @@ namespace Challenge_Labs_2._2
                     attempts++;
                     Console.WriteLine("Incorrect UserID. Please try again.");
 
-                    if (attempts == 3)
+                    if (attempts == 2)
                     {
                         Console.WriteLine("Max attempts used...exiting Program..");
                         continueProgram = false;
